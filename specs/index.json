@@ -1,0 +1,23 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "JS CMS API",
+    "description": "JS CMS API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:4000",
+      "description": "Development environment"
+    }
+  ],
+  "tags": [
+    {
+      "name": "user",
+      "description": "The user endpoints"
+    }
+  ],
+  "paths": {
+    "/user": {}
+  }
+}
