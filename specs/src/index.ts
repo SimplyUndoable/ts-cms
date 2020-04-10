@@ -1,9 +1,9 @@
 import * as fs from 'fs'
 import * as dotenv from 'dotenv'
 import * as OpenApi from 'openapi-types'
-import userSpecs from "./user"
+import userSpecs from './user'
 
-dotenv.config({path: '../.env'})
+dotenv.config({ path: '../.env' })
 
 const specArray = [userSpecs]
 
@@ -16,46 +16,46 @@ interface ISpec {
 }
 
 specArray.forEach((el: ISpec) => {
-    Object.assign(paths, el.paths)
-    tags.push(...el.tags)
+	Object.assign(paths, el.paths)
+	tags.push(...el.tags)
 })
 
 const specs: OpenApi.OpenAPIV3.Document = {
-    openapi: "3.0.1",
-    info: {
-        title: "JS CMS API",
-        description: "JS CMS API",
-        version: "1.0.0"
-    },
-    security: [
-        {
-            bearer: []
-        }
-    ],
-    components: {
-        securitySchemes: {
-            bearer: {
-                type: 'http',
-                scheme: 'bearer',
-                bearerFormat: "JWT",
-            }
-        }
-    },
-    servers: [
-        {
-            url: `http://localhost:${process.env.API_PORT}`,
-            description: 'Development environment'
-        }
-    ],
-    tags: tags,
-    paths: paths
+	openapi: '3.0.1',
+	info: {
+		title: `${process.env.NAME} API`,
+		description: `${process.env.NAME} API`,
+		version: '1.0.0'
+	},
+	security: [
+		{
+			bearer: []
+		}
+	],
+	components: {
+		securitySchemes: {
+			bearer: {
+				type: 'http',
+				scheme: 'bearer',
+				bearerFormat: 'JWT',
+			}
+		}
+	},
+	servers: [
+		{
+			url: `http://localhost:${process.env.API_PORT}`,
+			description: 'Development environment'
+		}
+	],
+	tags: tags,
+	paths: paths
 }
 
-fs.writeFile("index.json", JSON.stringify(specs), 'utf8', (e) => {
-    if (e) {
-        console.log("An error occurred while writing the specs.")
-        return console.log(e)
-    }
+fs.writeFile('index.json', JSON.stringify(specs), 'utf8', (e) => {
+	if (e) {
+		console.log('An error occurred while writing the specs.')
+		return console.log(e)
+	}
 
-    console.log("Specs has been saved.")
+	console.log('Specs has been saved.')
 })

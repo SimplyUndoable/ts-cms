@@ -15,6 +15,11 @@ run_app:
 	docker run -p $(APP_PORT):$(APP_PORT) -v `pwd`/app:/app -w /app --rm --name $(APP_NAME) node:latest npm start
 run_api:
 	docker run -p $(API_PORT):$(API_PORT) -v `pwd`/api:/api -w /api --rm --name $(API_NAME) node:latest npm start
+build: build_api
+build_app:
+	yarn build-app
+build_api:
+	yarn build-api
 migrate:
 	$(KNEX_MIGRATE)latest
 make_migration_%:

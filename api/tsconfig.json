@@ -1,6 +1,20 @@
 {
-  "extends": "../tsconfig.json",
-  "types": [
-    "node"
-  ]
+	"extends": "./node_modules/@simplyundoable/typescript-preset/preset/ts",
+	"include": [
+		"src",
+		"src/index.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"build"
+	],
+	"compilerOptions": {
+		"baseUrl": "./src",
+		"paths": {
+			"~*": [
+				"./*"
+			]
+		},
+		"outDir": "./build"
+	}
 }
