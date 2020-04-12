@@ -1,6 +1,8 @@
+// @ts-ignore
 const environment = process.env.NODE_ENV || 'development'
 
-import config from '../knexfile'
+// @ts-ignore
+import config from './knexfile'
 
 import knex from 'knex'
 

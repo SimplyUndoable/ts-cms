@@ -1,6 +1,6 @@
 include .env
 
-KNEX=./api/node_modules/knex/bin/cli.js --knexfile ./api/knexfile.ts
+KNEX=./api/node_modules/knex/bin/cli.js --esm --cwd ./api --knexfile db/knexfile.ts
 KNEX_MIGRATE=$(KNEX) migrate:
 KNEX_SEED=$(KNEX) seed:
 
