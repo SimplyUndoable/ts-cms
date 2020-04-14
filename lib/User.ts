@@ -1,4 +1,4 @@
-export const TABLE_USER = 'user'
+export const TABLE_USER = 'users'
 
 export const COL_ID = 'id'
 export const COL_EMAIL = 'email'
