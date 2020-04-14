@@ -1,0 +1,13 @@
+{
+	"extends": "./node_modules/@simplyundoable/typescript-preset/preset/core",
+	"include": [
+		"./**/*.ts"
+	],
+	"compilerOptions": {
+		"plugins": [
+			{
+				"name": "typescript-deno-plugin"
+			}
+		]
+	}
+}

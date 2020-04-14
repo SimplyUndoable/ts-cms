@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "oak/": "https://deno.land/x/oak/",
+    "sql_builder/": "https://deno.land/x/sql_builder/",
+    "dotenv/":"https://deno.land/x/dotenv/",
+	"pg/": "https://deno.land/x/postgres/",
+	"argon2/": "https://denopkg.com/fdionisi/deno-argon2/"
+  }
+}
