@@ -4,17 +4,8 @@
     "lib/**/*.ts",
     "specs/**/*.ts",
     "./*.ts",
-    "api-deno/**/*.ts"
   ],
-  "compilerOptions": {
-    "plugins": [
-      {
-        "name": "typescript-deno-plugin"
-      }
-    ],
-    "paths": {
-      "http://*": ["../../../../../../Library/Caches/deno/deps/http/*"],
-      "https://*": ["../../../../../../Library/Caches/deno/deps/https/*"]
-    }
-  }
+  "exclude": [
+	  "api"
+  ]
 }
