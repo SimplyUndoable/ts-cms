@@ -10,7 +10,8 @@ run: run_api
 run_app:
 	docker run -p $(APP_PORT):$(APP_PORT) -v `pwd`/app:/app -w /app --rm --name $(APP_NAME) node:latest npm start
 run_api:
-	docker run -p $(API_PORT):$(API_PORT) -v `pwd`/api:/api -w /api --rm --name $(API_NAME) hayd/alpine-deno:latest --allow-net mod.ts
+	# docker run -p $(API_PORT):$(API_PORT) -v `pwd`/api:/api -v `pwd`/.env:/.env -w /api --rm --name $(API_NAME) hayd/alpine-deno:latest -c tsconfig.json --importmap import_map.json --allow-net --allow-read --allow-env mod.ts
+	deno run -c api/tsconfig.json --importmap api/import_map.json --allow-net --allow-read --allow-env api/mod.ts
 build: build_app
 build_app:
 	yarn build-app

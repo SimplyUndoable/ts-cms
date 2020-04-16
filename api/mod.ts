@@ -1,7 +1,7 @@
-import { Http } from 'drash/mod.ts'
+import { Drash } from 'drash/mod.ts'
 import { API_HOST, API_PORT } from './config/config.ts'
 
-const server = new Http.Server({
+const server = new Drash.Http.Server({
 	address: `${API_HOST}:${API_PORT}`,
 	response_output: 'application/json',
 	resources: []
