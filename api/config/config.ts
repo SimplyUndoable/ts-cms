@@ -1,9 +1,17 @@
 import { config } from 'dotenv/dotenv.ts'
+
 let env
 try {
 	 env = config({ path: '../../.env' })
 } catch(e){
-	 env = {}
+	console.log('Env fallback to local')
+	 env = {
+		API_PORT: '4000',
+		DB_PORT: '5000',
+		DB_USER: 'root',
+		DB_PWD: 'pwd',
+		DB_URL: 'localhost'
+	 }
 }
 
 
