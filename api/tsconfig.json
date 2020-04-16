@@ -1,0 +1,6 @@
+{
+	"extends": "../node_modules/@simplyundoable/typescript-preset/preset/core",
+	"include": [
+		"./**/*.ts"
+	]
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "./node_modules/@simplyundoable/typescript-preset/preset/ts",
+  "include": [
+    "lib/**/*.ts",
+    "specs/**/*.ts",
+    "./*.ts",
+  ],
+  "exclude": [
+	  "api"
+  ]
+}

@@ -1,2 +1,5 @@
-# refactored-octo-palm-tree
-A React-Deno CMS
+# TS-CMS
+
+A React-TypeScript CMS
+
+Api written with deno
