@@ -14,5 +14,3 @@ jobs:
           ${{ secrets.CODECOMMIT_SSH_URL }}
         ssh_private_key:
           ${{ secrets.CODECOMMIT_SSH_PRIVATE_KEY }}
-        ssh_username:
-          ${{ secrets.CODECOMMIT_SSH_PRIVATE_KEY_ID }}
